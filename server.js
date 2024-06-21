@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(morgan('dev'))
 
 mongoose.set('strictQuery', true)
-mongoose.connect('mongodb+srv://mrsrisalafountain:D3INAzzICrV0AMgF@cluster0.dhmkqhk.mongodb.net/', 
+mongoose.connect(process.env.MONGOURI,
 (err) => console.log('connected to the database', err))
 
 //ROUTE HANDLERS
